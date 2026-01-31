@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     id("com.google.gms.google-services")
+    alias(libs.plugins.google.firebase.crashlytics)
 }
 
 android {
@@ -39,9 +40,13 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation("com.github.chrisbanes:PhotoView:2.3.0")
     
+    // Google Play Services for Location
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+    
     // Firebase Libraries
     implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     implementation("com.google.firebase:firebase-auth")
+    implementation(libs.firebase.crashlytics)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

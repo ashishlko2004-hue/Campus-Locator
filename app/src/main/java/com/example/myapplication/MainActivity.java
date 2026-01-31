@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         findRouteButton = findViewById(R.id.find_route_button);
         logoutButton = findViewById(R.id.logout_button);
 
-        ArrayList<String> locationNames = new ArrayList<>(Arrays.asList("main gate", "atm", "central park"));
+        ArrayList<String> locationNames = new ArrayList<>(Arrays.asList(
+                "main gate", "central park", "green park", "helipad", "junior ground", "academic block a1", "academic block a2", "administrative building", "atm", "auditorium", "iet building", "library", "cafeteria", "ground"
+        ));
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, locationNames);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
